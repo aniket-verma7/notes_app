@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="100dp"
+                android:background="@drawable/edittext_background">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/newTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Title"
+                    android:maxLength="100" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/input1"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/edittext_background"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/newDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:hint="Description"
+                    android:maxLength="1000" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/buttonPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/input2"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/camera"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="Pick Image" />
+
+                <Button
+                    android:id="@+id/saveNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="Save" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/buttonPanel"
+                android:layout_marginTop="20dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
